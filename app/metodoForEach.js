@@ -1,6 +1,8 @@
 const elementoParaInserirLivros = document.getElementById('livros');
+const elementoValorTotalLivros = document.getElementById('valor_total_livros_disponiveis');
 
 function exibirLivrosTela(listaDeLivros){
+    elementoValorTotalLivros.innerHTML = '';
     elementoParaInserirLivros.innerHTML = '';
     listaDeLivros.forEach(livro => {
         let disponibilidade = livro.quantidade > 0 ? 'livro__imagem' : 'livro_imagens indisponivel';
